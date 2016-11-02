@@ -1,54 +1,99 @@
-/*
 
-Uncomment for sick pokestyle
 
-@font-face {
-  font-family: "Pokemon";
-  src: url(../fonts/PokemonSolid.ttf) format("truetype");
-}
-
-a, p, h2, h3 {
+p, h2 {
   color: rgb(215, 215, 0);
   text-shadow: rgb(35, 75, 180) 3px 3px 1px;
   -webkit-text-stroke: 2px rgb(55, 95, 200);
   text-decoration: none;
   border-radius: 100px;
+  text-align: center;
+  padding: 5px;
+  margin: 0;
 }
 
-
-body {
-  background-image: url(../images/pokedex.png);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  font-family: "Pokemon", monospace;
-  letter-spacing: .25em;
-  font-size: 200%;
+h3{
+  padding: 10px, 0, 0, 0;
+  margin: 0;
 }
+
+a{
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 80%;
+}
+nav > a {
+color: rgb(215, 215, 0);
+text-shadow: rgb(35, 75, 180) 3px 3px 1px;
+-webkit-text-stroke: 2px rgb(55, 95, 200);
+text-decoration: none;
+font-size: 26px;
+padding: 3px;
+border: 6px solid transparent;
+}
+
 
 a:hover {
-  padding: 20px;
-  animation: pulse 1s infinite;
+animation: pulse 1s infinite;
+border-radius: 100px;
 }
-.containareon, h1 {
+
+img{
+  display: block;
+  margin: auto;
+  height: 180px;
+  padding-top: 5px;
+}
+
+body {
+  background-image: url(../images/trainer.png);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Pokemon", monospace;
+  letter-spacing: .25em;
+  font-size: 170%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#submit{
+  padding: 8px 20px;
+  margin: 15px;
+  border: 2px solid black;
+  font-family: "Pokemon";
+  font-size: 20px;
+  border-radius: 100px;
+}
+
+.containareon{
   box-sizing: border-box;
   padding: 10px;
-  width: 50%;
+  width: 80%;
   margin: auto;
-  background-color: rgba(255, 255, 255, .8);
   text-align: center;
   justify-content: center;
 }
 
 .pokemon{
-  min-width: 375px;
-  background-color: rgb(255, 255, 255);
+  width: 30vw;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .5);
   padding: 10px;
   margin: 40px;
   box-sizing: border-box;
   border: 15px inset;
   border-radius: 100px;
-  border-top-color: rgba(255, 0, 0, .5);
-  border-left-color: rgba(255, 0, 0, .5);
+  border-top-color: rgba(255, 0, 0, .8);
+  border-left-color: rgba(255, 0, 0, .8);
   border-right-color: rgba(225, 225, 225, .5);
   border-bottom-color: rgba(225, 225, 225, .5);
 }
@@ -70,4 +115,9 @@ a:hover {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
     background-color: rgba(0, 0, 0, .1);
   }
-}*/
+}
+
+@font-face {
+  font-family: "Pokemon";
+  src: url(../fonts/PokemonSolid.ttf) format("truetype");
+}

@@ -1,0 +1,14 @@
+
+<h1>Pokedex</h1>
+<% @pokemon.each do |poke|%>
+<div class="pokemon">
+<a href='pokemon/<%= poke.id%>'>
+  <h2><%= poke.name %></h2>
+  <img src='<%= poke.img_url%>'></a>
+  <form action="/pokedex/<%= poke.id%>" method="post">
+    <input type="hidden" name = "_method" value="delete">
+    <input id="submit" type="submit" name = "delete" value="Release into the Wild">
+  </form>
+
+</div>
+ <% end %>

@@ -1,0 +1,8 @@
+<h1><%= @pokemon.name%></h1>
+<img src='<%= @pokemon.img_url%>'>
+<p>Combat Power: <%=@pokemon.cp%></p>
+<p>Pokemon Type: <%=@pokemon.poke_type%></p>
+<p>Trainer: <%=@trainer.name%></p>
+<form action="/pokemon/<%= @pokemon.id%>/edit" method="get">
+  <input id="submit" type="submit" value="Edit">
+</form>

@@ -1,0 +1,9 @@
+
+<h1>Trainers</h1>
+<% @trainers.each do |trainer|%>
+<div class="pokemon">
+<a href='trainer/<%= trainer.id%>'>
+  <h2><%= trainer.name %></h2>
+  <img src='<%= trainer.img_url%>'></a>
+</div>
+ <% end %>

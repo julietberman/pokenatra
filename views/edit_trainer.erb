@@ -1,0 +1,21 @@
+<h1><%= @trainer.name%></h1>
+<img src='<%= @trainer.img_url%>'>
+<br/>
+
+<form action="/trainer/<%= @trainer.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <p><label for="trainer[name]">Name: </label></p>
+  <input name="trainer[name]" value="<%= @trainer.name %>">
+
+  <p><label for="trainer[level]">Level: </label></p>
+  <input name="trainer[level]" value="<%= @trainer.level %>">
+
+  <p><label for="trainer[battles_won]">Battles Won: </label></p>
+  <input name="trainer[battles_won]" value="<%= @trainer.battles_won %>">
+
+  <p><label for="trainer[img_url]">Photo: </label></p>
+  <input name="trainer[img_url]" value="<%= @trainer.img_url %>"><br/>
+
+<input id="submit" type="submit" value="Update">
+</form>

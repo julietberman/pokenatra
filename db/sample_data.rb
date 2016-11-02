@@ -1,4 +1,6 @@
-allPokemon = [
+def get_poke_data
+
+  allPokemon = [
   {
     "id": "001",
     "name": "Bulbasaur",
@@ -62965,4 +62967,6 @@ allPokemon = [
       "entreeforestlevel": "30"
     }
   }
-]
+  ]
+  return poke_data
+end

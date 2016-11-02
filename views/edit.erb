@@ -1,0 +1,30 @@
+<h1><%= @pokemon.name%></h1>
+<img src='<%= @pokemon.img_url%>'>
+<br/>
+
+<form action="/pokemon/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <p><label for="pokemon[name]">Name: </label></p>
+  <input name="pokemon[name]" value="<%= @pokemon.name %>">
+
+  <p><label for="pokemon[cp]">Combat Power: </label></p>
+  <input name="pokemon[cp]" value="<%= @pokemon.cp %>">
+
+  <p><label for="pokemon[poke_type]">Pokemon Type: </label></p>
+  <input name="pokemon[poke_type]" value="<%= @pokemon.poke_type%>">
+
+
+  <p><label for="pokemon[trainer_id]">Trainer: </label></p>
+  <select name = "pokemon[trainer_id]" >
+    <% @trainer_kvs.each do |option| %>
+    <%name = option.keys[0]%>
+    <option name = "pokemon[trainer_id]" value = "<%= option[name].to_i %>"><%=name%></option>
+    <% end %>
+  </select>
+
+  <p><label for="pokemon[img_url]">Photo: </label></p>
+  <input name="pokemon[img_url]" value="<%= @pokemon.img_url %>"><br/>
+
+<input id="submit" type="submit" value="Update">
+</form>
